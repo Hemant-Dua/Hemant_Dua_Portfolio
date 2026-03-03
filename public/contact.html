@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Hemant</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+</head>
+
+<body>
+    <div id="canvas-container">
+        <canvas id="bg-canvas"></canvas>
+    </div>
+
+    <nav class="glass-nav section-transition">
+        <div class="nav-content">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="Hemant Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/skills">Skills</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <section id="contact" class="contact section-transition fade-up">
+            <div class="section-header">
+                <h2 class="section-title">Let's Initialize Connection</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text glass-card full-width">
+                    <p>
+                        If you’re interested in backend systems that incorporate machine learning in a practical and
+                        deployable way, feel free to reach out.
+                    </p>
+                    <div class="cta-group" style="margin-top: 2rem;">
+                        <a href="mailto:hemantdua686@gmail.com" class="btn primary-btn">Email</a>
+                        <a href="https://www.linkedin.com/in/hemant-dua-20083125b/" target="_blank"
+                            class="btn secondary-btn">LinkedIn</a>
+                        <a href="https://github.com/Hemant-Dua" target="_blank" class="btn secondary-btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header mt-4">
+                <h2 class="section-title">System Status Log</h2>
+                <div class="line"></div>
+            </div>
+            <div class="terminal-box glass-card" id="terminal-output">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">hemant@portfolio:~</span>
+                </div>
+                <div class="terminal-body" id="sys-status">
+                    <p><span class="prompt">$</span> ./fetch_status.sh</p>
+                    <p>Booting up...</p>
+                    <p>Initializing chaos engine v1.0</p>
+                    <p>Feeding hamsters powering CPU wheel...</p>
+                    <p>Negotiating with toaster for extra RAM...</p>
+                    <p class="loading-pulse">success</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>"From Syntax to Systems"</p>
+        <p class="cyber-nature-tag">Built by <span class="highlight-cyber">Hemant Dua</span></p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

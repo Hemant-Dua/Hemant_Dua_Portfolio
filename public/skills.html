@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Hemant</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+</head>
+
+<body>
+    <div id="canvas-container">
+        <canvas id="bg-canvas"></canvas>
+    </div>
+
+    <nav class="glass-nav section-transition">
+        <div class="nav-content">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="Hemant Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/skills" class="active">Skills</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <section id="skills" class="skills section-transition fade-up">
+            <div class="section-header">
+                <h2 class="section-title">What I Work With</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category glass-card">
+                    <h3>Backend Engineering</h3>
+                    <ul class="styled-list">
+                        <li>API development using FastAPI, Node.js, and Express</li>
+                        <li>Backend integration for ML inference</li>
+                        <li>Session and state handling</li>
+                        <li>Database design with MySQL and SQLite</li>
+                        <li>Containerized development using Docker on Linux</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3>AI / Machine Learning</h3>
+                    <ul class="styled-list">
+                        <li>Machine learning model development and evaluation</li>
+                        <li>LLM integration using Gemma and LLaMA 2</li>
+                        <li>Prompt engineering and response control</li>
+                        <li>Context and memory handling for AI-driven systems</li>
+                        <li>Offline and local model deployment</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3>Systems & Edge Computing</h3>
+                    <ul class="styled-list">
+                        <li>Raspberry Pi and ESP-32 based deployments</li>
+                        <li>Sensor data ingestion and processing</li>
+                        <li>Backend-to-device communication</li>
+                        <li>AI-assisted IoT workflows</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category glass-card tech-stack">
+                    <h3>Technical Stack</h3>
+                    <div class="tech-group">
+                        <span class="highlight-nature">Languages:</span> Python, Go, C/C++
+                    </div>
+                    <div class="tech-group">
+                        <span class="highlight-nature">Backend:</span> FastAPI, Node.js, Express
+                    </div>
+                    <div class="tech-group">
+                        <span class="highlight-nature">Databases:</span> MySQL, SQLite
+                    </div>
+                    <div class="tech-group">
+                        <span class="highlight-nature">AI/ML:</span> Scikit-learn, LLaMA 2, Gemma, Ollama, LangChain
+                    </div>
+                    <div class="tech-group">
+                        <span class="highlight-nature">Systems:</span> Docker, Git, Linux
+                    </div>
+                    <div class="tech-group">
+                        <span class="highlight-nature">Embedded:</span> Raspberry Pi 5, ESP-32, Arduino
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>"From Syntax to Systems"</p>
+        <p class="cyber-nature-tag">Built by <span class="highlight-cyber">Hemant Dua</span></p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

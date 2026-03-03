@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Available | Hemant</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .not-available-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+        }
+
+        .error-code {
+            font-size: 6rem;
+            font-family: var(--font-heading);
+            color: var(--accent-error);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 15px rgba(255, 85, 85, 0.4);
+        }
+
+        .glitch-text {
+            color: var(--text-primary);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .error-desc {
+            max-width: 600px;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="/images/logo.png">
+</head>
+
+<body>
+    <div id="canvas-container">
+        <canvas id="bg-canvas"></canvas>
+    </div>
+
+    <nav class="glass-nav section-transition">
+        <div class="nav-content">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="Hemant Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/skills">Skills</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <section class="section-transition fade-up">
+            <div class="not-available-container">
+                <h1 class="error-code">404</h1>
+                <h2 class="glitch-text highlight-cyber">Access Denied: Repo Offline</h2>
+                <p class="error-desc text-secondary">
+                    The requested project repository or live demo is currently unavailable, either due to being a
+                    private repository, under maintenance, or a strict local hardware deployment.
+                </p>
+                <div class="cta-group" style="justify-content: center;">
+                    <a href="/projects" class="btn primary-btn">Return to Projects</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>"From Syntax to Systems"</p>
+        <p class="cyber-nature-tag">Built by <span class="highlight-cyber">Hemant Dua</span></p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
