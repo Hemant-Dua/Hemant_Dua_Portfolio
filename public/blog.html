@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systems Log | Blog</title>
+    <!-- Core site styles for layout/nav -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Jarvis specific overrides -->
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;500;700&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+</head>
+
+<!-- Note the specific jarvis-theme class -->
+
+<body class="jarvis-theme">
+    <div class="scan-line"></div>
+
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="Hemant Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/skills">Skills</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/blog.html" class="active">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="hud-container">
+        <header class="hud-header">
+            <div>
+                <h1 class="hud-title typewriter" data-blinker="false">SYSTEMS_LOG</h1>
+                <p class="typewriter" data-blinker="true" style="margin-top: 10px; visibility: hidden;">ACCESSING
+                    ARCHIVE PROTOCOLS...</p>
+            </div>
+            <div class="sys-status">
+                <div>SYS.STATUS: <span style="color:var(--jarvis-cyan)">ONLINE</span></div>
+                <div>LOCAL_TIME: <span id="sys-time">0000-00-00 00:00:00</span></div>
+            </div>
+        </header>
+
+        <section class="log-grid">
+
+            <!-- Post 1 -->
+            <a href="/blog-posts/blog001/yashika-origin.html" class="data-panel">
+                <div class="log-meta">
+                    <span>ID: LOG-001</span>
+                    <span>2026.03.08</span>
+                </div>
+                <h2 class="log-title">Why Use ChatGPT When I Can Build My Own?</h2>
+                <p class="log-excerpt">The story behind Project Y.A.S.H.I.K.A — my attempt to build a personal AI
+                    assistant that runs entirely on my own machine instead of the cloud.</p>
+                <img src="/blog-posts/blog001/blogcard.jpg" alt="Blog 1" class="blog-image">
+                <div class="read-out">Decrypt_File</div>
+            </a>
+
+            <!-- Dummy Post 2
+            <a href="#" class="data-panel">
+                <div class="log-meta">
+                    <span>ID: LOG-002</span>
+                    <span>2026.02.15</span>
+                </div>
+                <h2 class="log-title">Gingangungang</h2>
+                <p class="log-excerpt">Au revior</p>
+                <div class="read-out">Decrypt_File</div>
+            </a>
+
+            <a href="#" class="data-panel">
+                <div class="log-meta">
+                    <span>ID: LOG-003</span>
+                    <span>2026.02.15</span>
+                </div>
+                <h2 class="log-title">Gingangungang</h2>
+                <p class="log-excerpt">Au revior</p>
+                <div class="read-out">Decrypt_File</div>
+            </a> -->
+
+        </section>
+    </main>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/blog.js"></script>
+</body>
+
+</html>

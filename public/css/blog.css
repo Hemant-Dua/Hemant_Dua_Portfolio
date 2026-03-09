@@ -1,0 +1,414 @@
+/**
+ * Jarvis Minimalist Cyber Theme (Isolated for Blog)
+ * Color Palette: True Black, Holographic Blue/Cyan
+ */
+
+:root {
+    --jarvis-bg: #010B13;
+    /* Extremely dark blue-black */
+    --jarvis-panel-bg: #02111d;
+    --jarvis-text-primary: #e0faff;
+    --jarvis-text-secondary: #70b8d5;
+
+    --jarvis-cyan: #00E5FF;
+    --jarvis-blue: #0088ff;
+    --jarvis-warning: #ffaa00;
+    --jarvis-error: #ff3333;
+
+    --jarvis-border: rgba(0, 229, 255, 0.3);
+    --jarvis-border-glow: rgba(0, 229, 255, 0.8);
+
+    --font-heading: 'Outfit', sans-serif;
+    --font-mono: 'Share Tech Mono', 'Courier New', monospace;
+    --font-body: 'Inter', sans-serif;
+
+    --transition-snappy: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Reset specifically for the body when in blog mode */
+body.jarvis-theme {
+    background-color: var(--jarvis-bg);
+    color: var(--jarvis-text-primary);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    background-image:
+        radial-gradient(circle at 50% 50%, rgba(0, 136, 255, 0.05) 0%, transparent 60%),
+        linear-gradient(rgba(0, 229, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px, 30px 30px;
+    background-position: center center, center center, center center;
+}
+
+/* HUD Navigation Override */
+body.jarvis-theme .glass-nav {
+    background: rgba(1, 11, 19, 0.8);
+    border-bottom: 1px solid var(--jarvis-border);
+    backdrop-filter: blur(10px);
+}
+
+body.jarvis-theme .nav-links a::after {
+    background: var(--jarvis-cyan);
+    box-shadow: 0 0 8px var(--jarvis-cyan);
+}
+
+body.jarvis-theme .nav-links a:hover {
+    color: var(--jarvis-cyan);
+}
+
+/* Typography Overrides */
+body.jarvis-theme h1,
+body.jarvis-theme h2,
+body.jarvis-theme h3 {
+    font-family: var(--font-heading);
+    color: var(--jarvis-cyan);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+body.jarvis-theme p {
+    color: var(--jarvis-text-secondary);
+}
+
+/* HUD Containers */
+.hud-container {
+    max-width: 1200px;
+    margin: 120px auto 40px auto;
+    /* Compaysate for navbar */
+    padding: 0 2rem;
+}
+
+.hud-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--jarvis-border);
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.hud-title {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hud-title::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--jarvis-cyan);
+    animation: rotate 4s linear infinite;
+}
+
+.sys-status {
+    font-family: var(--font-mono);
+    color: var(--jarvis-cyan);
+    font-size: 0.85rem;
+    text-align: right;
+}
+
+.blink {
+    animation: blink 1s step-end infinite;
+}
+
+/* Blog Listing Grid */
+.log-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* Data Panel / Blog Card */
+.data-panel {
+    background: var(--jarvis-panel-bg);
+    border: 1px solid var(--jarvis-border);
+    padding: 1.5rem;
+    position: relative;
+    transition: var(--transition-snappy);
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    /* Clipped corners effect */
+    clip-path: polygon(0 15px,
+            15px 0,
+            100% 0,
+            100% calc(100% - 15px),
+            calc(100% - 15px) 100%,
+            0 100%);
+}
+
+/* Inner border accent */
+.data-panel::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px dashed rgba(0, 229, 255, 0.1);
+    pointer-events: none;
+    transition: var(--transition-snappy);
+}
+
+.data-panel:hover {
+    background: rgba(0, 136, 255, 0.1);
+    border-color: var(--jarvis-border-glow);
+    box-shadow: inset 0 0 20px rgba(0, 229, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.data-panel:hover::after {
+    border-color: rgba(0, 229, 255, 0.3);
+}
+
+.log-meta {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--jarvis-blue);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.log-title {
+    font-size: 1.4rem;
+    color: var(--jarvis-text-primary);
+    margin-bottom: 1rem;
+    transition: var(--transition-snappy);
+}
+
+.data-panel:hover .log-title {
+    color: var(--jarvis-cyan);
+}
+
+.log-excerpt {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.data-panel .blog-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--jarvis-border);
+    filter: opacity(0.6);
+    transition: var(--transition-snappy);
+    /* Clipped bottom-right corner to match panel theme */
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+}
+
+.data-panel:hover .blog-image {
+    filter: grayscale(0%) opacity(1);
+    border-color: var(--jarvis-cyan);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+}
+
+.read-out {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--jarvis-cyan);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.read-out::after {
+    content: '→';
+    transition: transform 0.2s;
+}
+
+.data-panel:hover .read-out::after {
+    transform: translateX(5px);
+}
+
+/* --- Single Post Styles --- */
+.post-container {
+    max-width: 800px;
+    margin: 120px auto 60px auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .post-container {
+        margin-top: 150px;
+        /* Increased clearance for the mobile navbar */
+        padding: 0 1rem;
+        /* Slightly smaller padding on mobile */
+    }
+}
+
+.post-header {
+    border-bottom: 2px solid var(--jarvis-border);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* Corner accents for headers */
+.post-header::before,
+.post-header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 30px;
+    height: 2px;
+    background: var(--jarvis-cyan);
+    box-shadow: 0 0 10px var(--jarvis-cyan);
+}
+
+.post-header::after {
+    right: 0;
+}
+
+.post-title {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--jarvis-text-primary);
+}
+
+.post-meta {
+    font-family: var(--font-mono);
+    color: var(--jarvis-blue);
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* Added so meta details wrap if needed */
+}
+
+.post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.post-content h2,
+.post-content h3 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: var(--jarvis-text-primary);
+    border-left: 3px solid var(--jarvis-cyan);
+    padding-left: 1rem;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+    color: var(--jarvis-text-secondary);
+}
+
+.code-block {
+    background: #000;
+    border: 1px solid var(--jarvis-border);
+    padding: 1.5rem;
+    border-radius: 4px;
+    /* Slight radius looks better here than clip-path */
+    font-family: var(--font-mono);
+    color: var(--jarvis-cyan);
+    overflow-x: auto;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.code-block::before {
+    content: 'SYS.EXEC()';
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    background: rgba(0, 229, 255, 0.1);
+    color: var(--jarvis-blue);
+    border-bottom-left-radius: 4px;
+}
+
+/* Animations */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.scan-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 2px;
+    background: rgba(0, 229, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+    z-index: 9999;
+    pointer-events: none;
+    animation: scan 6s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes scan {
+    0% {
+        top: -10px;
+    }
+
+    100% {
+        top: 100vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .hud-container {
+        margin-top: 150px;
+        /* Extra clearance for mobile navbar */
+    }
+
+    .hud-title {
+        font-size: 2rem;
+    }
+
+    .hud-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .sys-status {
+        text-align: left;
+    }
+
+    .post-title {
+        font-size: 2.2rem;
+    }
+
+    /* Make the flex container holding post-meta and social buttons wrap automatically */
+    .post-header>div:last-of-type {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1.5rem !important;
+    }
+
+    .post-meta {
+        gap: 0.8rem;
+    }
+}

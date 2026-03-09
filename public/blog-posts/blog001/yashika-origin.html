@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG-001 | Jarvis Protocol</title>
+    <!-- Core site styles for layout/nav -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Jarvis specific overrides -->
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;500;700&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+</head>
+
+<body class="jarvis-theme">
+    <div class="scan-line"></div>
+
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="Hemant Logo" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/skills">Skills</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/blog.html" class="active">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="post-container">
+
+        <header class="post-header">
+            <a href="/blog.html" class="read-out" style="margin-bottom: 2rem; display: inline-flex;">&lt;
+                BACK_TO_LOGS</a>
+            <h1 class="post-title typewriter" data-blinker="false">Why Use ChatGPT When I Can Build My Own?</h1>
+            <h2 class="post-subtitle"
+                style="font-size: 1.2rem; opacity: 0.8; font-weight: normal; font-family: var(--font-mono); margin-top: -1rem; margin-bottom: 2rem;">
+                The Origin Story of Project Y.A.S.H.I.K.A.
+            </h2>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <div class="post-meta" style="margin-bottom: 0; align-items: center;">
+                    <span>AUTHOR: HEMANT_DUA</span>
+                    <span>DATE: 2026.03.08</span>
+                    <span>CLASS: PUBLIC</span>
+                </div>
+
+                <div style="display: flex; gap: 0.8rem; align-items: center;">
+                    <a href="https://github.com/Hemant-Dua" target="_blank" aria-label="GitHub" class="social-btn"
+                        style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--jarvis-border); background: rgba(0, 136, 255, 0.05); color: var(--jarvis-cyan); transition: all 0.3s ease; text-decoration: none;"
+                        onmouseover="this.style.background='rgba(0, 136, 255, 0.15)'; this.style.borderColor='var(--jarvis-cyan)'; this.style.boxShadow='0 0 10px rgba(0, 229, 255, 0.3)';"
+                        onmouseout="this.style.background='rgba(0, 136, 255, 0.05)'; this.style.borderColor='var(--jarvis-border)'; this.style.boxShadow='none';">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hemant-dua-20083125b/" target="_blank" aria-label="LinkedIn"
+                        class="social-btn"
+                        style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--jarvis-border); background: rgba(0, 136, 255, 0.05); color: var(--jarvis-cyan); transition: all 0.3s ease; text-decoration: none;"
+                        onmouseover="this.style.background='rgba(0, 136, 255, 0.15)'; this.style.borderColor='var(--jarvis-cyan)'; this.style.boxShadow='0 0 10px rgba(0, 229, 255, 0.3)';"
+                        onmouseout="this.style.background='rgba(0, 136, 255, 0.05)'; this.style.borderColor='var(--jarvis-border)'; this.style.boxShadow='none';">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/headhunterhemant/" target="_blank" aria-label="Instagram"
+                        class="social-btn"
+                        style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--jarvis-border); background: rgba(0, 136, 255, 0.05); color: var(--jarvis-cyan); transition: all 0.3s ease; text-decoration: none;"
+                        onmouseover="this.style.background='rgba(0, 136, 255, 0.15)'; this.style.borderColor='var(--jarvis-cyan)'; this.style.boxShadow='0 0 10px rgba(0, 229, 255, 0.3)';"
+                        onmouseout="this.style.background='rgba(0, 136, 255, 0.05)'; this.style.borderColor='var(--jarvis-border)'; this.style.boxShadow='none';">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <article class="post-content">
+            <div
+                style="position: relative; margin: 0 0 3rem 0; border: 1px solid var(--jarvis-border); border-radius: 4px; box-shadow: 0 0 15px rgba(0, 240, 255, 0.1); overflow: hidden;">
+                <img src="/blog-posts/blog001/blogcard.jpg" alt="Why Use ChatGPT When I Can Build My Own?"
+                    style="width: 100%; height: auto; display: block;">
+
+                <!-- Decorative corner elements -->
+                <div
+                    style="position: absolute; top: 0; left: 0; width: 15px; height: 15px; border-top: 2px solid var(--jarvis-cyan); border-left: 2px solid var(--jarvis-cyan); pointer-events: none;">
+                </div>
+                <div
+                    style="position: absolute; top: 0; right: 0; width: 15px; height: 15px; border-top: 2px solid var(--jarvis-cyan); border-right: 2px solid var(--jarvis-cyan); pointer-events: none;">
+                </div>
+                <div
+                    style="position: absolute; bottom: 0; left: 0; width: 15px; height: 15px; border-bottom: 2px solid var(--jarvis-cyan); border-left: 2px solid var(--jarvis-cyan); pointer-events: none;">
+                </div>
+                <div
+                    style="position: absolute; bottom: 0; right: 0; width: 15px; height: 15px; border-bottom: 2px solid var(--jarvis-cyan); border-right: 2px solid var(--jarvis-cyan); pointer-events: none;">
+                </div>
+            </div>
+
+            <p>Most AI assistants today rely entirely on the cloud. When you ask a question, your request travels to a
+                remote server where a model processes it and sends the response back. The experience feels seamless, but
+                it also means something important: the intelligence you interact with isn’t really yours.</p>
+            <p>Your data leaves your machine, the model runs somewhere you cannot control, and the system stops working
+                the moment the internet disappears.</p>
+            <p>That idea always felt limiting.</p>
+            <p>I started wondering what it would look like if the intelligence itself lived on my machine. Not just a
+                chatbot interface, but something closer to a personal AI system that could understand context, remember
+                interactions, and interact directly with the computer it runs on.</p>
+            <p><b>That idea became Project Y.A.S.H.I.K.A. — Yet Another Super Human Intelligent Knowledge Agent.</b></p>
+            <p>The goal of the project is simple: build a locally hosted AI assistant that can operate independently of
+                external AI services while still being capable enough to interact with real workflows.</p>
+
+            <h2>The Spark Behind the Idea</h2>
+            <p>While exploring local AI tools, I came across a video explaining how large language models can run
+                entirely on personal machines instead of relying on cloud APIs.</p>
+            <p>You can watch it here:</p>
+            <div
+                style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 2rem 0; border: 1px solid var(--jarvis-blue); border-radius: 4px; box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);">
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                    src="https://www.youtube.com/embed/WxYC9-hBM_g?si=Q2QxU89SyLVzGQ0m" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>The video demonstrates how tools like Ollama allow developers to run language models locally and interact
+                with them directly. Seeing a model operate completely offline made one thing clear: if the model can run
+                locally, then the rest of the system around it can be designed locally as well.</p>
+            <p>That realization pushed the idea further. Instead of just running a model in a terminal, I wanted to
+                build something with structure — a system that could manage memory, handle commands, and eventually
+                evolve into a broader personal AI ecosystem.</p>
+
+            <h2>Why Local AI Matters</h2>
+            <p>Cloud AI services are powerful, but they come with trade-offs. They depend on internet connectivity, rely
+                on external infrastructure, and operate in environments that users cannot fully control.</p>
+            <p>Running AI locally changes the relationship between the user and the system.</p>
+            <p>When the model lives on your machine, the data never leaves your device. The assistant can continue
+                functioning even when offline, and it becomes possible to integrate AI directly with the operating
+                system, applications, and hardware devices.</p>
+            <p>Local AI shifts the system from something you access to something you own.</p>
+            <p>YASHIKA was designed around that principle.</p>
+
+            <h2>What YASHIKA Actually Does</h2>
+            <p>YASHIKA is a locally hosted AI system that combines an LLM, persistent memory, system commands, and
+                multi-interface clients into a personal AI assistant.</p>
+            <p>At its core, YASHIKA acts as an orchestration layer between a user interface, a locally hosted language
+                model, and the computer itself.</p>
+            <p>The assistant communicates with language models hosted through Ollama, which exposes an API for running
+                models like Gemma or LLaMA locally.</p>
+            <p>Instead of forwarding prompts to external AI APIs, the system sends requests directly to the model
+                running on the machine.</p>
+            <p>However, a useful assistant requires more than just model responses. To maintain continuity in
+                conversations, YASHIKA maintains its own structured memory system. Conversations are stored in JSON
+                files that separate long-term memory, active context, and detailed logs. This layered approach allows
+                the system to keep track of recent interactions while preserving historical information for later use.
+            </p>
+            <p>The assistant can also retrieve information from the web when necessary. If a request requires external
+                information, the system can trigger a DuckDuckGo search, fetch the results, and summarize them locally
+                using the model before returning the response.</p>
+            <p>Another capability built into YASHIKA is system interaction. Certain commands allow the assistant to open
+                applications, access directories, or launch tools on the system. To ensure safety, only predefined
+                commands are allowed, preventing the assistant from executing arbitrary instructions.</p>
+            <p>This combination of capabilities transforms the assistant from a simple chat interface into something
+                closer to a system companion.</p>
+
+            <h2>Architecture of the System</h2>
+            <p>The core of YASHIKA is a backend engine built using FastAPI. This engine acts as the central coordinator
+                that connects the user interfaces, the memory system, and the local language model.</p>
+            <div
+                style="position: relative; margin: 3rem 0; padding: 3rem 2rem; background: var(--jarvis-panel-bg); border: 1px solid var(--jarvis-border); border-radius: 4px; box-shadow: inset 0 0 20px rgba(0, 229, 255, 0.05), 0 0 15px rgba(0, 240, 255, 0.1); display: flex; justify-content: center; align-items: center; overflow: hidden;">
+                <!-- Decorative corner elements -->
+                <div
+                    style="position: absolute; top: 0; left: 0; width: 15px; height: 15px; border-top: 2px solid var(--jarvis-cyan); border-left: 2px solid var(--jarvis-cyan);">
+                </div>
+                <div
+                    style="position: absolute; top: 0; right: 0; width: 15px; height: 15px; border-top: 2px solid var(--jarvis-cyan); border-right: 2px solid var(--jarvis-cyan);">
+                </div>
+                <div
+                    style="position: absolute; bottom: 0; left: 0; width: 15px; height: 15px; border-bottom: 2px solid var(--jarvis-cyan); border-left: 2px solid var(--jarvis-cyan);">
+                </div>
+                <div
+                    style="position: absolute; bottom: 0; right: 0; width: 15px; height: 15px; border-bottom: 2px solid var(--jarvis-cyan); border-right: 2px solid var(--jarvis-cyan);">
+                </div>
+
+                <img src="/blog-posts/blog001/arch.svg" alt="Architecture"
+                    style="max-width: 100%; height: auto; position: relative; z-index: 1;">
+
+                <!-- Status/Header -->
+                <div
+                    style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); background: rgba(0, 229, 255, 0.1); border: 1px solid var(--jarvis-border); border-bottom: none; padding: 2px 15px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--jarvis-cyan); letter-spacing: 2px; border-top-left-radius: 4px; border-top-right-radius: 4px; backdrop-filter: blur(4px); z-index: 2;">
+                    Fig_1: Architecture of YASHIKA
+                </div>
+            </div>
+            <p>Whenever a user sends a message, the request first reaches the FastAPI server. The server retrieves
+                relevant context from memory, injects it into the prompt, and forwards the request to the model running
+                through Ollama. Once the model produces a response, the backend processes the output, updates the
+                conversation logs, and streams the result back to the user interface.</p>
+            <p>Separating the orchestration layer from the model layer makes the system easier to extend. New
+                interfaces, features, or models can be added without changing the entire architecture.</p>
+
+            <h2>Interfaces for Interaction</h2>
+            <p>Currently, YASHIKA can be accessed through two different interfaces.</p>
+            <p>The first is a web interface built with HTML, CSS, and JavaScript. It provides a simple browser-based
+                chat environment for interacting with the assistant.</p>
+            <p>The second interface is a desktop application built using GTK and Python. This client is designed to
+                integrate more closely with the system, providing a dashboard-like interface that can eventually support
+                automation triggers, hardware monitoring, and deeper system control.</p>
+            <p>Both interfaces communicate with the same FastAPI backend, ensuring that the assistant behaves
+                consistently regardless of how the user interacts with it.</p>
+
+            <h2>Where the Project Is Going</h2>
+            <p>YASHIKA is still an evolving system.</p>
+            <p>The current version focuses primarily on establishing the foundation for local AI interaction: a working
+                architecture that combines language models, memory systems, command execution, and multiple user
+                interfaces.</p>
+            <p>Future development will explore several new capabilities. Offline speech recognition and text-to-speech
+                will allow more natural interactions. Bluetooth connectivity could enable integration with wearable
+                devices and sensors. Event-based triggers could allow the assistant to respond automatically to system
+                changes or environmental signals.</p>
+            <p>The long-term goal is to move beyond a desktop assistant and build something closer to a personal AI
+                ecosystem.</p>
+
+            <h2>Final Thoughts</h2>
+            <p>Running a language model locally is relatively straightforward today. The real challenge is designing
+                everything around it — context management, memory handling, system integration, and user interfaces.</p>
+            <p>YASHIKA is an attempt to explore that problem space.</p>
+            <p>What began as curiosity about local AI infrastructure has grown into a modular system that can interact
+                with models, remember conversations, execute commands, and integrate with the environment it runs in.
+            </p>
+            <p>The project is still evolving, but each step moves closer to the same idea that started it all:</p>
+            <p>A personal AI that runs on your machine, understands your environment, and belongs entirely to you.</p>
+
+            <hr style="border: 0; height: 1px; background: rgba(0, 240, 255, 0.2); margin: 3rem 0;">
+
+            <h2>Explore the Project</h2>
+            <p>If you're interested in the technical details or want to explore how the system works, you can check out
+                the project repository:</p>
+            <a href="https://github.com/Hemant-Dua/Project-YASHIKA" target="_blank"
+                style="display: block; background: rgba(0, 136, 255, 0.05); border: 1px solid var(--jarvis-border); padding: 1.5rem; margin-bottom: 2rem; border-radius: 4px; text-decoration: none; transition: all 0.3s ease; position: relative; overflow: hidden;"
+                onmouseover="this.style.background='rgba(0, 136, 255, 0.1)'; this.style.borderColor='var(--jarvis-cyan)'; this.style.transform='translateX(5px)';"
+                onmouseout="this.style.background='rgba(0, 136, 255, 0.05)'; this.style.borderColor='var(--jarvis-border)'; this.style.transform='translateX(0)';">
+                <div
+                    style="font-family: var(--font-heading); color: var(--jarvis-cyan); font-size: 1.2rem; margin-bottom: 0.5rem; letter-spacing: 1px;">
+                    &gt; GITHUB_REPOSITORY: Hemant-Dua/Project-YASHIKA</div>
+                <div style="color: var(--jarvis-text-secondary); font-size: 0.95rem;">Access the architecture, setup
+                    instructions, and the current implementation of the YASHIKA engine.</div>
+                <div class="read-out" style="margin-top: 1rem;">ACCESS_SOURCE</div>
+            </a>
+
+            <p>If you'd like to see the system in action, I’ve also shared a short demo and overview on LinkedIn.</p>
+
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7355479355227058178/" target="_blank"
+                style="display: block; background: rgba(0, 136, 255, 0.05); border: 1px solid var(--jarvis-border); padding: 1.5rem; margin-bottom: 2rem; border-radius: 4px; text-decoration: none; transition: all 0.3s ease; position: relative; overflow: hidden;"
+                onmouseover="this.style.background='rgba(0, 136, 255, 0.1)'; this.style.borderColor='var(--jarvis-cyan)'; this.style.transform='translateX(5px)';"
+                onmouseout="this.style.background='rgba(0, 136, 255, 0.05)'; this.style.borderColor='var(--jarvis-border)'; this.style.transform='translateX(0)';">
+                <div
+                    style="font-family: var(--font-heading); color: var(--jarvis-cyan); font-size: 1.2rem; margin-bottom: 0.5rem; letter-spacing: 1px;">
+                    &gt; VIEW_DEMONSTRATION</div>
+                <div style="color: var(--jarvis-text-secondary); font-size: 0.95rem;">Watch a brief demo and system
+                    overview shared on LinkedIn.</div>
+                <div class="read-out" style="margin-top: 1rem;">PLAY_VIDEO</div>
+            </a>
+
+            <p>YASHIKA is still evolving, and the long-term goal is to expand it into a larger personal AI ecosystem
+                with deeper system and hardware integration.</p>
+
+            <p>If you find the project interesting, feel free to fork the repository, star it, or contribute to the
+                project. Collaboration, ideas, and feedback are always welcome.</p>
+
+            <p>And if you want to follow along as the project grows:</p>
+
+            <a href="https://www.linkedin.com/in/hemant-dua-20083125b/" target="_blank"
+                style="display: block; background: rgba(0, 136, 255, 0.05); border: 1px solid var(--jarvis-border); padding: 1.5rem; margin-bottom: 2rem; border-radius: 4px; text-decoration: none; transition: all 0.3s ease; position: relative; overflow: hidden;"
+                onmouseover="this.style.background='rgba(0, 136, 255, 0.1)'; this.style.borderColor='var(--jarvis-cyan)'; this.style.transform='translateX(5px)';"
+                onmouseout="this.style.background='rgba(0, 136, 255, 0.05)'; this.style.borderColor='var(--jarvis-border)'; this.style.transform='translateX(0)';">
+                <div
+                    style="font-family: var(--font-heading); color: var(--jarvis-cyan); font-size: 1.2rem; margin-bottom: 0.5rem; letter-spacing: 1px;">
+                    &gt; CONNECT_NETWORK</div>
+                <div style="color: var(--jarvis-text-secondary); font-size: 0.95rem;">Follow my LinkedIn profile for
+                    future updates and project expansions.</div>
+                <div class="read-out" style="margin-top: 1rem;">ESTABLISH_CONNECTION</div>
+            </a>
+
+            <p style="text-align: center; margin-top: 4rem; color: var(--jarvis-blue); font-family: var(--font-mono)">
+                --- END OF LOG ---
+            </p>
+        </article>
+
+    </main>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/blog.js"></script>
+</body>
+
+</html>
